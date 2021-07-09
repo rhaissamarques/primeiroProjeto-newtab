@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Projeto HTML/CSS/JS</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+    <body>
+        <div class="popUp" id="idPopUp">
+            <span>Excluir transações?</span>
+            <div>
+                <button onclick="clearData()">Sim</button>
+                <button onclick="closePoup()">Não</button>
+            </div>
+        </div>
+        <header class="header-top">
+            <div class="header-img">
+                <img src="./logo.jpg" alt="">
+                <div>Controle finaceiro</div>
+            </div>
+            <img src="./menu-hamburger.png" id="hamb-menu" onclick="hambMenu()"/>
+            <div class="header-menu" id="menuHeader">
+                <a href="#" id="close-menu" onclick="closeMenu()">X</a>
+                <a href="#" id="limparDados" onclick="openPoup()">Limpar dados</a>
+                <a href="#" id="cadastroTransacoes">Cadastro de transações</a>
+                <a href="#" id="salvarServidor" onclick="saveServidor()">Salvar no servidor</a>
+            </div>
+        </header>
+        <div class="content" id="contentBody">
+            <form class="ttransacao" action="#" name="tTransacao">
+                    <span class="novaTransacao">Nova transação</span>
+                    <div class="campoFormulario">
+                        <div class="tipoTransacao">
+                            <span>Tipo transação</span>
+                            <div>
+                                <select name="compraVenda" id="compraVenda">
+                                    <option value="0">Selecione</option>
+                                    <option value="1">Compra</option>
+                                    <option value="2">Venda</option>
+                                </select>
+                            </div>
+                            <em></em>
+                        </div>
+                        <div class="mercadoriaNome">
+                            <span>Nome da mercadoria</span>
+                            <div><input type="text" name="nameMercadoria" id="nameMercadoria" placeholder="Input"/></div>
+                            <em id="erroMercadoria">Preencha nome mercadoria</em>
+                        </div>
+                        <div class="value-merc">
+                            <span>Valor</span>
+                            <div><input type="text" name="valorMercadoria" id="valorMercadoria" placeholder="R$ 0,00"/></div>
+                            <em id="erroValor">Preencha valor</em>
+                        </div>
+                    </div>
+                    <button onclick="return validaForm()">Adicionar transação</button>
+            </form>
+            <div class="campoExtrato">
+                <span class="extratoTransacao">Extrato de transação</span>
+                <div class="mercadoriaValor">
+                    <span id="mercadoriaMercadoria">Mercadoria</span>
+                    <span>Valor</span>
+                </div>
+                <div id="resultado">
+                    
+                </div>
+                <div class="valorTotal">
+                    <span id="total">Total</span>
+                    <div>
+                        <span id="valorValorTotal"></span>
+                        <span id="lucroOuPrejuizo"><span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./responsive.js"></script>
+    </body>
+</html>

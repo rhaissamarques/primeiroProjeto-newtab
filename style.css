@@ -1,0 +1,379 @@
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+.header-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ddd;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 0.9em;
+    height: 80px;
+}
+
+.header-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 10px 10px 50px;
+}
+
+.header-img img{
+    margin-right: 30px;
+}
+
+.header-img div{
+    font-size: 2em;
+}
+
+.header-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 50px 10px 10px;
+    background-color: white;
+}
+
+.header-menu a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+#hamb-menu{
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#limparDados,#cadastroTransacoes{
+    border-right-style: solid;
+    border-width: 2px;
+    padding-right: 10px;
+}
+
+#close-menu{
+    visibility: hidden;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.ttransacao{
+    width: 29%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+}
+
+.ttransacao input,select{
+    width: 100%;
+    height: 40px;
+    border-width: 0.5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.campoFormulario em{
+    display: none;
+    color: red;
+}
+
+.novaTransacao,.extratoTransacao{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.ttransacao button{
+    background-color: #333;
+    color: white;
+    height: 40px;
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.campoExtrato{
+    width: 65%;
+    height: 45%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 30px;
+}
+
+.extratoTransacao{
+    padding-bottom: 20px;
+}
+
+.merc,.mercadoriaValor,.valorTotal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mercadoriaValor, .valorTotal{
+    width: 100%;
+    font-weight: bold;
+}
+
+.merc, .mercadoriaValor{
+    border-bottom: 1px solid #333;
+    padding: 20px 0px;
+}
+
+.valorTotal{
+    border-top: 1px solid #333;
+    margin-top: 5px;
+    padding: 20px 0px
+}
+
+.valorTotal div{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+#lucroOuPrejuizo{
+    font-weight: normal;
+    font-size: 0.5em;
+}
+
+#mercadoriaMercadoria, #total{
+    padding-left: 13px;
+}
+
+.popUp{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    background-color: #ddd;
+    padding: 2%;
+    width: 20%;
+    height: 15%;
+    margin: 17% 38%;
+}
+
+.popUp div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.popUp button{
+    width: 40%;
+    height: 100%;
+}
+
+/*-----------------------------------------------------------*/
+/* Mobile Tablet Landscape */
+
+@media screen and (max-width: 1140px){
+    .header-top{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .content{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .popUp{
+        width: 30%;
+        height: 15%;
+        margin: 20% 35%;
+    }
+
+}
+
+/*-----------------------------------------------------------*/
+/* Mobile Tablet Portrait */
+
+@media screen and (max-width: 800px){
+    .header-img{
+        width: 60%;
+        margin: 10px 20px ;
+        justify-content: space-between;
+    }
+
+    .header-menu{
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        height: 100%;
+        width: 252px;
+        background-color: #333;
+        right: 0;
+        top: 0;
+        margin: 0;
+        align-items: flex-end;
+        font-size: 1.5em;
+        padding: 0;
+    }
+    
+    .header-menu a{
+        color: white;
+        margin: 0;
+        padding: 8px 10px;
+    }
+
+    #limparDados:hover, #cadastroTransacoes:hover, #salvarServidor:hover{
+        transition:All 1s ease;
+        -webkit-transition:All 1s ease;
+        -moz-transition:All 1s ease;
+        -o-transition:All 1s ease;
+        background-color: white;
+        color: #333;
+    }
+
+    #limparDados{
+        padding-left: 140px;
+        border-right-style: none;
+    }
+
+    #cadastroTransacoes{
+        padding-left: 65px;
+        border-right-style: none;
+    }
+
+    #salvarServidor{
+        padding-left: 106px;
+    }
+
+    #close-menu{
+        visibility: visible;
+        font-size: 1.3em;
+        margin-right: auto;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #hamb-menu{
+        visibility: visible;
+        padding: 10px 20px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ttransacao{
+        width: 85%;
+        height: 45%;
+        margin: 10px;
+    }
+
+    .ttransacao button{
+        width: auto;
+        margin-left: auto;
+    }
+
+    .campoFormulario{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-flow: row wrap;
+    }
+
+    .tipoTransacao select{
+        width: 150px;
+    }
+
+    .mercadoriaNome{
+        width: 250px;
+    }
+
+    .value-merc{
+        width: 150px;
+    }
+
+    .campoExtrato{
+        width: 80%;
+        margin: 10px;
+    }
+    .popUp{
+        width: 30%;
+        height: 15%;
+        margin: 25% 32%;
+    }
+}
+
+/*-----------------------------------------------------------*/
+/* Mobile Smartphone */
+
+@media screen and (max-width: 650px){
+    .ttransacao{
+        margin: 10px;
+        padding: 0px 0px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid #333;
+        border-radius: 0;
+    }
+
+    .header-top {
+        height: 60px;
+    }
+
+    .header-img{
+        width: 62%;
+        justify-content: space-between;
+    }
+
+    .header-img div{
+        font-size: 1.8em;
+    }
+
+    .campoFormulario{
+        display: unset;
+        padding: 20px 0px;
+    }
+
+    .novaTransacao {
+        display: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .tipoTransacao select, .mercadoriaNome, .value-merc{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    .ttransacao button{
+        width: 100%;
+        margin-left: 0;
+    }
+    .popUp{
+        width: 40%;
+        height: 20%;
+        margin: 40% 27%;
+    }
+
+}
