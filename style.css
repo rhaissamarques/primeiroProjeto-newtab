@@ -1,10 +1,10 @@
-body{
-    font-family: 'Lato', sans-serif;
+body {
+    font-family: lato;
     margin: 0;
     padding: 0;
-    font-size: 0.8em;
+    font-size: 14px;
 }
-.header-top{
+.header-top {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,26 +12,28 @@ body{
     background-color: #ddd;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 0.9em;
+    font-size: 20px;
     height: 80px;
+    font-weight: 600;
+    font-style: normal;
 }
 
-.header-img{
+.header-img {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 10px 10px 10px 50px;
 }
 
-.header-img img{
+.header-img img {
     margin-right: 30px;
 }
 
-.header-img div{
+.header-img div {
     font-size: 2em;
 }
 
-.header-menu{
+.header-menu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,28 +42,28 @@ body{
     background-color: white;
 }
 
-.header-menu a{
+.header-menu a {
     margin-right: 10px;
     text-decoration: none;
     color: #333;
 }
 
-#hamb-menu{
+#hamb-menu {
     visibility: hidden;
     cursor: pointer;
 }
 
-#limparDados,#cadastroTransacoes{
+#limparDados,#cadastroTransacoes {
     border-right-style: solid;
     border-width: 2px;
     padding-right: 10px;
 }
 
-#close-menu{
+#close-menu {
     visibility: hidden;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -69,7 +71,7 @@ body{
     padding-right: 0px;
 }
 
-.ttransacao{
+.ttransacao {
     width: 29%;
     height: 45%;
     display: flex;
@@ -81,7 +83,7 @@ body{
     border-radius: 4px;
 }
 
-.ttransacao input,select{
+.ttransacao input,select {
     width: 100%;
     height: 40px;
     border-width: 0.5px;
@@ -89,18 +91,18 @@ body{
     background-color: white;
 }
 
-.campoFormulario em{
+.campoFormulario em {
     display: none;
     color: red;
 }
 
-.novaTransacao,.extratoTransacao{
+.novaTransacao,.extratoTransacao {
     text-align: center;
     font-weight: bold;
     font-size: 1.5em;
 }
 
-.ttransacao button{
+.ttransacao button {
     background-color: #333;
     color: white;
     height: 40px;
@@ -110,7 +112,7 @@ body{
     cursor: pointer;
 }
 
-.campoExtrato{
+.campoExtrato {
     width: 65%;
     height: 45%;
     padding: 30px;
@@ -119,48 +121,48 @@ body{
     margin: 50px 30px;
 }
 
-.extratoTransacao{
+.extratoTransacao {
     padding-bottom: 20px;
 }
 
-.merc,.mercadoriaValor,.valorTotal{
+.merc,.mercadoriaValor,.valorTotal {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.mercadoriaValor, .valorTotal{
+.mercadoriaValor, .valorTotal {
     width: 100%;
     font-weight: bold;
 }
 
-.merc, .mercadoriaValor{
+.merc, .mercadoriaValor {
     border-bottom: 1px solid #333;
     padding: 20px 0px;
 }
 
-.valorTotal{
+.valorTotal {
     border-top: 1px solid #333;
     margin-top: 5px;
     padding: 20px 0px
 }
 
-.valorTotal div{
+.valorTotal div {
     display: flex;
     flex-direction: column;
     text-align: end;
 }
 
-#lucroOuPrejuizo{
+#lucroOuPrejuizo {
     font-weight: normal;
     font-size: 0.5em;
 }
 
-#mercadoriaMercadoria, #total{
+#mercadoriaMercadoria, #total {
     padding-left: 13px;
 }
 
-.popUp{
+.popUp {
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -174,13 +176,13 @@ body{
     margin: 17% 38%;
 }
 
-.popUp div{
+.popUp div {
     display: flex;
     width: 100%;
     justify-content: space-around;
 }
 
-.popUp button{
+.popUp button {
     width: 40%;
     height: 100%;
 }
@@ -188,16 +190,17 @@ body{
 /*-----------------------------------------------------------*/
 /* Mobile Tablet Landscape */
 
-@media screen and (max-width: 1140px){
+@media screen and (max-width: 1140px) {
+
     .header-top{
         padding-left: 0;
         padding-right: 0;
     }
-    .content{
+    .content {
         padding-left: 0;
         padding-right: 0;
     }
-    .popUp{
+    .popUp {
         width: 30%;
         height: 15%;
         margin: 20% 35%;
@@ -208,14 +211,15 @@ body{
 /*-----------------------------------------------------------*/
 /* Mobile Tablet Portrait */
 
-@media screen and (max-width: 800px){
-    .header-img{
+@media screen and (max-width: 800px) {
+
+    .header-img {
         width: 60%;
         margin: 10px 20px ;
         justify-content: space-between;
     }
 
-    .header-menu{
+    .header-menu {
         display: none;
         position: fixed;
         flex-direction: column;
@@ -230,13 +234,13 @@ body{
         padding: 0;
     }
     
-    .header-menu a{
+    .header-menu a {
         color: white;
         margin: 0;
         padding: 8px 10px;
     }
 
-    #limparDados:hover, #cadastroTransacoes:hover, #salvarServidor:hover{
+    #limparDados:hover, #cadastroTransacoes:hover, #salvarServidor:hover {
         transition:All 1s ease;
         -webkit-transition:All 1s ease;
         -moz-transition:All 1s ease;
@@ -245,21 +249,21 @@ body{
         color: #333;
     }
 
-    #limparDados{
+    #limparDados {
         padding-left: 140px;
         border-right-style: none;
     }
 
-    #cadastroTransacoes{
+    #cadastroTransacoes {
         padding-left: 65px;
         border-right-style: none;
     }
 
-    #salvarServidor{
+    #salvarServidor {
         padding-left: 106px;
     }
 
-    #close-menu{
+    #close-menu {
         visibility: visible;
         font-size: 1.3em;
         margin-right: auto;
@@ -267,30 +271,30 @@ body{
         padding-left: 20px;
     }
 
-    #hamb-menu{
+    #hamb-menu {
         visibility: visible;
         padding: 10px 20px;
         height: 30px;
         width: 30px;
     }
 
-    .content{
+    .content {
         flex-direction: column;
         align-items: center;
     }
 
-    .ttransacao{
+    .ttransacao {
         width: 85%;
         height: 45%;
         margin: 10px;
     }
 
-    .ttransacao button{
+    .ttransacao button {
         width: auto;
         margin-left: auto;
     }
 
-    .campoFormulario{
+    .campoFormulario {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -298,23 +302,23 @@ body{
         flex-flow: row wrap;
     }
 
-    .tipoTransacao select{
+    .tipoTransacao select {
         width: 150px;
     }
 
-    .mercadoriaNome{
+    .mercadoriaNome {
         width: 250px;
     }
 
-    .value-merc{
+    .value-merc {
         width: 150px;
     }
 
-    .campoExtrato{
+    .campoExtrato {
         width: 80%;
         margin: 10px;
     }
-    .popUp{
+    .popUp {
         width: 30%;
         height: 15%;
         margin: 25% 32%;
@@ -324,8 +328,9 @@ body{
 /*-----------------------------------------------------------*/
 /* Mobile Smartphone */
 
-@media screen and (max-width: 650px){
-    .ttransacao{
+@media screen and (max-width: 650px) {
+
+    .ttransacao {
         margin: 10px;
         padding: 0px 0px;
         border-top: 0;
@@ -339,16 +344,16 @@ body{
         height: 60px;
     }
 
-    .header-img{
+    .header-img {
         width: 62%;
         justify-content: space-between;
     }
 
-    .header-img div{
+    .header-img div {
         font-size: 1.8em;
     }
 
-    .campoFormulario{
+    .campoFormulario {
         display: unset;
         padding: 20px 0px;
     }
@@ -360,17 +365,17 @@ body{
         font-size: 1.5em;
     }
 
-    .tipoTransacao select, .mercadoriaNome, .value-merc{
+    .tipoTransacao select, .mercadoriaNome, .value-merc {
         padding-bottom: 10px;
         padding-top: 10px;
         width: 100%;
     }
 
-    .ttransacao button{
+    .ttransacao button {
         width: 100%;
         margin-left: 0;
     }
-    .popUp{
+    .popUp {
         width: 40%;
         height: 20%;
         margin: 40% 27%;
